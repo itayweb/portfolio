@@ -1,95 +1,205 @@
+import NavBar from "@/components/navbar/navbar";
+import { Box, Button, Typography } from "@mui/material";
+import './globals.css'
 import Image from "next/image";
-import styles from "./page.module.css";
+import EastIcon from '@mui/icons-material/East';
+import DownloadIcon from '@mui/icons-material/Download';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-export default function Home() {
+function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <Box sx={{
+      backgroundColor: 'rgba(37,159,248,0.31)',
+      paddingTop: '2rem',
+      backgroundImage: 'url("/noise.png")',
+    }}>
+      <NavBar />
+      <Box sx={{
+        height: '100vh',
+      }} id="home">
+        <Image src="/profilepic.jpeg" alt="profilePic" width='300' height='300' style={{
+          borderRadius: '50%',
+          border: '0.3rem solid white',
+          display: 'block',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          marginTop: '5vh'
+        }} />
+        <Typography sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginTop: '2.5vh',
+          // TODO: Change font family to apply automatically in every component
+          fontFamily: 'Nunito, sans-serif',
+        }}>MY NAME IS</Typography>
+        <Typography sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: '8rem',
+          fontFamily: 'Nunito, sans-serif'
+        }}>Itay Adler</Typography>
+        <Typography sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontFamily: 'Nunito, sans-serif',
+        }}>AND I&apos;M A</Typography>
+        <Typography sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: '3rem',
+          fontFamily: 'Nunito, sans-serif'
+        }}>Full-Stack Developer And BI Developer</Typography>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '2.5vw',
+          marginTop: '3vh'
+        }}>
+          <Button sx={{
+            backgroundColor: 'black',
+            color: 'white',
+            borderRadius: '3rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            ":hover": {
+              backgroundColor: 'black',
+              scale: '1.1'
+            }
+          }}>
+            Contact me here
+            <EastIcon sx={{
+              marginLeft: '1vw',
+            }} />
+          </Button>
+          <Button sx={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '3rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            ":hover": {
+              backgroundColor: 'white',
+              scale: '1.1'
+            }
+          }}>
+            Download CV
+            <DownloadIcon fontSize="small" sx={{
+            marginLeft: '1vw'
+            }} />
+          </Button>
+          {/*TODO: make button circle like design*/}
+          <Button sx={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '4rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            ":hover": {
+              backgroundColor: 'white',
+              scale: '1.1'
+            },
+            // padding: '0'
+          }} href="https://www.linkedin.com/in/itay-adler/">
+            <LinkedInIcon fontSize="small" />
+          </Button>
+          {/*TODO: make button circle like design*/}
+          <Button sx={{
+            backgroundColor: 'white',
+            color: 'black',
+            borderRadius: '4rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            ":hover": {
+              backgroundColor: 'white',
+              scale: '1.1'
+            },
+            // padding: '0'
+          }} href="https://github.com/itayweb">
+            <GitHubIcon fontSize="small" />
+          </Button>
+        </Box>
+      </Box>
+      <Box sx={{
+        height: '100vh',
+        marginTop: '5rem'
+      }} id="about">
+        <Box sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '15rem'
+        }}>
+          <Box>
+            <Typography sx={{
+              display: 'flex',
+              justifyContent: 'start',
+              fontSize: '8rem',
+              fontFamily: 'Nunito, sans-serif',
+              marginLeft: '3rem'
+            }}>
+              About Me
+            </Typography>
+            <Typography sx={{
+              fontFamily: 'Nunito, sans-serif',
+              display: 'flex',
+              // TODO: center text acording to 'About Me' text not to page
+              justifyContent: 'center',
+              fontSize: '2rem',
+              marginLeft: '3rem'
+            }}>
+              I’m a Full-Stack and BI Developer <br/> with exprience from several <br/> projects and both big firm such as <br/> IDF and mid-size start-up such as <br/> RavenDB.
+            </Typography>
+          </Box>
+          <Box sx={{
+            // TODO: Fix inplace sticker like css
+            '&::before': {
+              // content: '""',
+              // height: '25px',
+              // width: '80px',
+              // backgroundColor: 'rgba(255, 255, 255, .3)',
+              // position: 'absolute',
+              // top: '-5px',
+              // left: '-5px',
+              // transform: 'translateX(-30%) translateY(10%) rotate(-45deg)',
+              // boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.4)',
+              background: 'rgba(255,255,235,0.6)',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.4)',
+              content: '""',
+              display: 'block',
+              height: '30px',
+              position: 'absolute',
+              margin: 'auto',
+              width: '150px',
+              // left: '0',
+              // top: '10px',
+              transform: 'rotate(-35deg)',
+            },
+          }}>
+            <Image src="/profilepic2.jpeg" alt="profilePic2" width='510' height='485' style={{
+              display: 'flex',
+              flexDirection: 'row',
+              borderTop: '2rem solid #D9D9D9',
+              borderLeft: '2rem solid #D9D9D9',
+              borderRight: '2rem solid #D9D9D9',
+              borderBottom: '6rem solid #D9D9D9',
+              // TODO: Fix border radius applying only to border without image
+              // borderRadius: '5%',
+              boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
+            }} />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
+
+export default Home;
