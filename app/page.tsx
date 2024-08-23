@@ -9,6 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Home() {
   return (
+    // TODO: reponsive design
     <Box sx={{
       backgroundColor: 'rgba(37,159,248,0.31)',
       paddingTop: '2rem',
@@ -156,7 +157,114 @@ function Home() {
               fontSize: '2rem',
               marginLeft: '3rem'
             }}>
-              I’m a Full-Stack and BI Developer <br/> with exprience from several <br/> projects and both big firm such as <br/> IDF and mid-size start-up such as <br/> RavenDB.
+              I’m a Full-Stack Developer and BI Developer <br/> with exprience from several <br/> projects and both big firm such as <br/> IDF and mid-size start-up such as <br/> RavenDB.
+            </Typography>
+          </Box>
+          <Box sx={{
+            // TODO: Fix inplace sticker like css
+            '&::before': {
+              // content: '""',
+              // height: '25px',
+              // width: '80px',
+              // backgroundColor: 'rgba(255, 255, 255, .3)',
+              // position: 'absolute',
+              // top: '-5px',
+              // left: '-5px',
+              // transform: 'translateX(-30%) translateY(10%) rotate(-45deg)',
+              // boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.4)',
+              background: 'rgba(255,255,235,0.6)',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.4)',
+              content: '""',
+              display: 'block',
+              height: '30px',
+              position: 'absolute',
+              margin: 'auto',
+              width: '150px',
+              // left: '0',
+              // top: '10px',
+              transform: 'rotate(-35deg)',
+            },
+          }}>
+            <Image src="/profilepic2.jpeg" alt="profilePic2" width='510' height='485' style={{
+              display: 'flex',
+              flexDirection: 'row',
+              borderTop: '2rem solid #D9D9D9',
+              borderLeft: '2rem solid #D9D9D9',
+              borderRight: '2rem solid #D9D9D9',
+              borderBottom: '6rem solid #D9D9D9',
+              // TODO: Fix border radius applying only to border without image
+              // borderRadius: '5%',
+              boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.5)',
+            }} />
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{
+        height: '100vh',
+        // marginTop: '5rem'
+      }} id="projects">
+        <Box sx={{
+          position: 'absolute',
+          // top: '3.5%',
+          width: '100%',
+          rotate: '-9deg',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          color: 'transparent',
+          WebkitTextStroke: '1px rgba(0, 0, 0, 0.21)',
+          TextStroke: '1px rgba(0, 0, 0, 0.21)',
+          zIndex: '-1'
+        }}>
+          <Typography sx={{
+            display: 'block',
+            lineHeight: '0.8',
+            fontSize: '8rem',
+            fontWeight: '700',
+          }}>
+            PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS
+          </Typography>
+          <Typography sx={{
+            display: 'block',
+            lineHeight: '0.8',
+            fontSize: '8rem',
+            fontWeight: '700',
+          }}>
+            PROJECTS PROJECTS PROJECTS PROJECTS PROJECTS
+          </Typography>
+        </Box>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '15rem'
+        }}>
+          <Box>
+            <Typography sx={{
+              display: 'flex',
+              justifyContent: 'start',
+              fontSize: '6rem',
+              fontFamily: 'Nunito, sans-serif',
+              marginLeft: '3rem'
+            }}>
+              Huffman
+            </Typography>
+            <Typography sx={{ // TODO: Center text according to design
+              display: 'flex',
+              justifyContent: 'start',
+              fontSize: '6rem',
+              fontFamily: 'Nunito, sans-serif',
+              // marginLeft: '3rem'
+            }}>
+              Encoding / Decoding
+            </Typography>
+            <Typography sx={{
+              fontFamily: 'Nunito, sans-serif',
+              display: 'flex',
+              // TODO: center text acording to project name text not to page
+              justifyContent: 'center',
+              fontSize: '2rem',
+              marginLeft: '3rem'
+            }}>
+              I’m a Full-Stack Developer and BI Developer <br/> with exprience from several <br/> projects and both big firm such as <br/> IDF and mid-size start-up such as <br/> RavenDB.
             </Typography>
           </Box>
           <Box sx={{
